@@ -29,12 +29,14 @@ class Anagram
 
   def character_count_matches(string)
     # will hash equality work here??
+    # YES!
     @character_count == self.class.count_characters(string)
   end
+
   # How to detect an anagram?
   # anagrams have the same number of the same characters
   # so, we could count each character, then check if the character counts are the same!
-  # (and take some shortcuts like checking that the lengths are the same, etc)
+  # and take a shortcut, checking that the lengths are the same
   def anagram?(string)
     length_matches(string) && character_count_matches(string)
   end
